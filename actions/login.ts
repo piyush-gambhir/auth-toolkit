@@ -98,6 +98,7 @@ export const login = async (
       password,
       redirectTo: callbackUrl || DEFAULT_LOGIN_REDIRECT,
     });
+    return { success: "Success" };
   } catch (error) {
     if (error instanceof AuthError) {
       switch (error.type) {
